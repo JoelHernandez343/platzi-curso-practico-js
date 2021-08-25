@@ -27,10 +27,11 @@
   border-radius: 1em;
   box-shadow: rgba(100, 100, 111, 0.1) 0px 7px 29px 0px;
   color: #3a3a3a;
-  display: grid;
+  display: inline-grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 1fr 2fr auto;
   padding: 1.5rem 0 1.5rem 1.5rem;
+  margin: 1rem 0;
 }
 
 .section__icon {
@@ -71,10 +72,21 @@
   margin-bottom: 0.5rem;
 }
 
+.subsection__subtitle {
+  font-family: 'Urbanist', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
 .subsection__description {
   font-family: 'Urbanist', sans-serif;
   font-size: 1rem;
   font-weight: 500;
+}
+
+.subsection__footer {
+  margin: 1rem 0;
 }
 
 /* Input css section */
@@ -87,6 +99,7 @@
   overflow: hidden;
   position: relative;
   margin: 0.5rem 0;
+  width: 100%;
 }
 
 .input__label {
@@ -127,6 +140,7 @@
   padding: 1rem 1rem 0 1rem;
   transition: all 150ms ease-in;
   z-index: 3;
+  width: 100%;
 }
 
 .input__input:hover {
@@ -155,6 +169,22 @@
 
 /* Input css section -- end */
 
+.button {
+  padding: 0.5rem 1rem;
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 600;
+  border-radius: 10px;
+  border-width: 1px;
+  border-color: rgba(0, 0, 0, 0.1);
+  background-color: white;
+  color: #50439d;
+  transition: all 150ms ease-in;
+}
+
+.button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
 @media screen and (min-width: 480px) {
   .header {
     padding: 5rem 4rem;
@@ -165,6 +195,7 @@
   }
 
   .section {
-    width: 30rem;
+    width: 24rem;
+    margin: 1rem 0.5rem 1rem 0;
   }
 }
