@@ -4,10 +4,54 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Urbanist:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
     <title>Geometric shapes</title>
   </head>
-  <body>
-    <h1>Geometric shapes</h1>
-    <script src="./js/index.js" type="module"></script>
+  <body class="body">
+    <header class="header">
+      <h1 class="header__title">Geometric Shapes</h1>
+    </header>
+
+    <main class="main">
+      <section class="section">
+        <h1 class="section__title">Triangles</h1>
+        <p class="section__description">
+          Basic formules to calculate perimeter and area of a triangle
+        </p>
+        <img
+          class="section__icon"
+          src="./assets/triangle-icon.png"
+          alt="triangle icon"
+        />
+        <div class="section__content">
+          <section class="subsection">
+            <h1 class="subsection__title">Area</h1>
+            <p class="subsection__description">
+              Please enter base and height dimensions or the 3 sides of the
+              triangle to calculate the area:
+            </p>
+            <form action="">
+              <!-- <label for="height-for-area">Height:</label> -->
+              <label class="input">
+                <input
+                  class="input__input"
+                  name="height-for-area"
+                  placeholder=" "
+                  type="number"
+                />
+                <span class="input__label">Label</span>
+                <span class="input__bg--focus"></span>
+              </label>
+            </form>
+          </section>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
