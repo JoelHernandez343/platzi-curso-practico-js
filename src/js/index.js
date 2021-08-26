@@ -41,6 +41,46 @@ const calcTrianglePerimeter = e => {
   }
 };
 
+const calcSquareArea = e => {
+  const form = e.target.closest('form');
+  const data = getFormObject(form);
+  const result = document.querySelector('#square_area_result');
+
+  if (data['side']) {
+    result.innerHTML = squareArea(parseFloat(data['side']));
+  }
+};
+
+const calcSquarePerimeter = e => {
+  const form = e.target.closest('form');
+  const data = getFormObject(form);
+  const result = document.querySelector('#square_perimeter_result');
+
+  if (data['side']) {
+    result.innerHTML = squarePerimeter(parseFloat(data['side']));
+  }
+};
+
+const calcCircleArea = e => {
+  const form = e.target.closest('form');
+  const data = getFormObject(form);
+  const result = document.querySelector('#circle_area_result');
+
+  if (data['radius']) {
+    result.innerHTML = circleArea(parseFloat(data['radius']));
+  }
+};
+
+const calcCirclePerimeter = e => {
+  const form = e.target.closest('form');
+  const data = getFormObject(form);
+  const result = document.querySelector('#circle_perimeter_result');
+
+  if (data['radius']) {
+    result.innerHTML = circlePerimeter(parseFloat(data['radius']));
+  }
+};
+
 window.addEventListener('load', () => {
   // triangle
   document
@@ -53,5 +93,31 @@ window.addEventListener('load', () => {
 
   document
     .querySelector('#bttn_triangle_clear')
+    .addEventListener('click', clearForm);
+
+  // square
+  document
+    .querySelector('#bttn_square_area')
+    .addEventListener('click', calcSquareArea);
+
+  document
+    .querySelector('#bttn_square_perimeter')
+    .addEventListener('click', calcSquarePerimeter);
+
+  document
+    .querySelector('#bttn_square_clear')
+    .addEventListener('click', clearForm);
+
+  // circle
+  document
+    .querySelector('#bttn_circle_area')
+    .addEventListener('click', calcCircleArea);
+
+  document
+    .querySelector('#bttn_circle_perimeter')
+    .addEventListener('click', calcCirclePerimeter);
+
+  document
+    .querySelector('#bttn_circle_clear')
     .addEventListener('click', clearForm);
 });

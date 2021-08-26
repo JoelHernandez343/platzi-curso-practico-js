@@ -1,5 +1,5 @@
-const circlePerimeter = radio => Math.PI * radio * 2;
+const circlePerimeter = radius => Math.PI * radius * 2;
 
-const circleArea = radio => Math.PI * radio * radio;
+const circleArea = radius => Math.PI * radius * radius;
 
 export { circleArea, circlePerimeter };
