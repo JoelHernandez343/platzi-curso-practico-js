@@ -14,7 +14,11 @@ const getSides = data => [
   parseFloat(data['side3']),
 ];
 
-const clearForm = e => e.target.closest('form').reset();
+const clearForm = (e, shape) => {
+  e.target.closest('form').reset();
+  document.querySelector(`#${shape}_area_result`).innerHTML = '';
+  document.querySelector(`#${shape}_perimeter_result`).innerHTML = '';
+};
 
 const calcTriangleArea = e => {
   const form = e.target.closest('form');
@@ -93,7 +97,7 @@ window.addEventListener('load', () => {
 
   document
     .querySelector('#bttn_triangle_clear')
-    .addEventListener('click', clearForm);
+    .addEventListener('click', e => clearForm(e, 'triangle'));
 
   // square
   document
@@ -106,7 +110,7 @@ window.addEventListener('load', () => {
 
   document
     .querySelector('#bttn_square_clear')
-    .addEventListener('click', clearForm);
+    .addEventListener('click', e => clearForm(e, 'square'));
 
   // circle
   document
@@ -119,5 +123,5 @@ window.addEventListener('load', () => {
 
   document
     .querySelector('#bttn_circle_clear')
-    .addEventListener('click', clearForm);
+    .addEventListener('click', e => clearForm(e, 'circle'));
 });
