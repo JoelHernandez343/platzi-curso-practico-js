@@ -8,6 +8,9 @@ const triangleAreaByEdges = edges => {
     b = edges[1],
     c = edges[2];
   const p = (a + b + c) / 2;
+
+  console.log(p * (p - a) * (p - b) * (p - c));
+
   const area = Math.sqrt(p * (p - a) * (p - b) * (p - c));
 
   return area;
