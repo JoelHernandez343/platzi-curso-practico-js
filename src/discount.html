@@ -13,129 +13,85 @@
     />
     <title>Document</title>
   </head>
-  <body>
-    <body class="body">
-      <header class="header">
-        <h1 class="header__title">Geometric Shapes</h1>
-      </header>
-  
-      <main class="main">
-        <section class="section">
-          <h1 class="section__title">Triangle</h1>
-          <p class="section__description">
-            Basic formules to calculate perimeter and area of a triangle
-          </p>
-          <img
-            class="section__icon"
-            src="./assets/triangle-icon.png"
-            alt="triangle icon"
-          />
-          <div class="section__content">
-            <section class="subsection">
-              <h1 class="subsection__title">Area & Perimeter</h1>
-  
-              <form action="">
-                <p class="subsection__description">
-                  Please enter base and height dimensions to calculate the area:
-                </p>
-                <label class="input">
-                  <input
-                    class="input__input"
-                    name="height"
-                    placeholder=" "
-                    type="number"
-                  />
-                  <span class="input__label">Height</span>
-                  <span class="input__bg--focus"></span>
-                </label>
-  
-                <label class="input">
-                  <input
-                    class="input__input"
-                    name="base"
-                    placeholder=" "
-                    type="number"
-                  />
-                  <span class="input__label">Base</span>
-                  <span class="input__bg--focus"></span>
-                </label>
-  
-                <p class="subsection__description">
-                  or the 3 sides of the triangle to calculate area or perimeter:
-                </p>
-  
-                <label class="input">
-                  <input
-                    class="input__input"
-                    name="side1"
-                    placeholder=" "
-                    type="number"
-                  />
-                  <span class="input__label">Side 1</span>
-                  <span class="input__bg--focus"></span>
-                </label>
-  
-                <label class="input">
-                  <input
-                    class="input__input"
-                    name="side2"
-                    placeholder=" "
-                    type="number"
-                  />
-                  <span class="input__label">Side 2</span>
-                  <span class="input__bg--focus"></span>
-                </label>
-  
-                <label class="input">
-                  <input
-                    class="input__input"
-                    name="side3"
-                    placeholder=" "
-                    type="number"
-                  />
-                  <span class="input__label">Side 3</span>
-                  <span class="input__bg--focus"></span>
-                </label>
-  
-                <h2 class="subsection__subtitle">Results</h2>
-  
-                <p class="subsection__description">
-                  AREA:
-                  <span
-                    class="subsection__result"
-                    id="triangle_area_result"
-                  ></span>
-                </p>
-  
-                <p class="subsection__description">
-                  PERIMETER:
-                  <span
-                    class="subsection__result"
-                    id="triangle_perimeter_result"
-                  ></span>
-                </p>
-  
-                <footer class="subsection__footer">
-                  <button class="button" type="button" id="bttn_triangle_area">
-                    AREA
-                  </button>
-                  <button
-                    class="button"
-                    type="button"
-                    id="bttn_triangle_perimeter"
-                  >
-                    PERIMETER
-                  </button>
-                  <button class="button" type="button" id="bttn_triangle_clear">
-                    CLEAR
-                  </button>
-                </footer>
-              </form>
-            </section>
-          </div>
-        </section>
-      </main>
 
-      <script src="./js/discount.js" type="module"></script>
+  <body class="body">
+    <header class="header">
+      <h1 class="header__title">Discount calculator</h1>
+    </header>
+
+    <main class="main">
+      <section class="section">
+        <h1 class="section__title">Discounts</h1>
+        <p class="section__description">
+          Basic form to calculate a simple discount over a price
+        </p>
+        <img
+          class="section__icon"
+          src="./assets/discount-icon.png"
+          alt="triangle icon"
+        />
+        <div class="section__content">
+          <section class="subsection">
+            <form action="">
+              <p class="subsection__description">
+                Please enter price and the discount:
+              </p>
+              <label class="input">
+                <input
+                  class="input__input"
+                  name="price"
+                  placeholder=" "
+                  type="number"
+                />
+                <span class="input__label">Original price</span>
+                <span class="input__bg--focus"></span>
+              </label>
+
+              <label class="input">
+                <input
+                  class="input__input"
+                  name="discount"
+                  placeholder=" "
+                  type="number"
+                />
+                <span class="input__label">Discount</span>
+                <span class="input__bg--focus"></span>
+              </label>
+
+              <h2 class="subsection__subtitle">Result</h2>
+
+              <p class="subsection__description">
+                NEW PRICE:
+                <span class="subsection__result" id="discount_result"></span>
+                $
+              </p>
+
+              <footer class="subsection__footer">
+                <button class="button" type="button" id="bttn_discount_calc">
+                  CALCULATE
+                </button>
+
+                <button class="button" type="button" id="bttn_discount_clear">
+                  CLEAR
+                </button>
+              </footer>
+            </form>
+          </section>
+        </div>
+      </section>
+
+      <div>
+        Money icon made by
+        <a href="https://www.flaticon.com/authors/pause08" title="Pause08"
+          >Pause08</a
+        >
+        from
+        <a href="https://www.flaticon.com/" title="Flaticon"
+          >www.flaticon.com</a
+        >
+      </div>
+    </main>
+
+    <script src="./js/discount.js" type="module"></script>
   </body>
 </html>
